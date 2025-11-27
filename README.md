@@ -1,9 +1,5 @@
 # 📸 Automated Face Recognition Attendance System
 
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 An intelligent face recognition-based attendance system built with Python and OpenCV. This system automatically detects and recognizes faces to mark attendance, eliminating manual processes and preventing proxy attendance.
 
 ---
@@ -123,19 +119,6 @@ Automated-attendance/
 
 ---
 
-## 📊 Screenshots
-
-### Dashboard
-<img src='UI_Image/register_1.png' width='600' alt='Main Dashboard'>
-
-### Image Capture
-<img src='UI_Image/vishwak.png' width='600' alt='Image Capture Interface'>
-
-### Attendance View
-<img src='UI_Image/record.png' width='600' alt='Attendance Records'>
-
----
-
 ## ⚙️ Configuration
 
 ### Adjust Number of Images Captured
@@ -193,10 +176,3 @@ See `requirements.txt` for all dependencies:
 - tensorflow
 - scikit-learn
 
----
-
-## 👨‍💻 Author
-
-**Vishwaksen**
-- GitHub: [@vishwaksen21](https://github.com/vishwaksen21)
-- Repository: [Automated-attendance](https://github.com/vishwaksen21/Automated-attendance)
