@@ -176,3 +176,6 @@ See `requirements.txt` for all dependencies:
 - tensorflow
 - scikit-learn
 
+  ## Credits
+- C Vishwak Sena (https://github.com/vishwaksen21) 
+
