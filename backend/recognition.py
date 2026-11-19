@@ -4,10 +4,13 @@ from deepface import DeepFace
 from pymongo import MongoClient
 from scipy.spatial.distance import cosine
 import numpy as np
+import os
 import time
 
 # ----------------- MongoDB Setup -----------------
-MONGODB_URI = "mongodb+srv://REDACTED"
+MONGODB_URI = os.getenv("MONGODB_URI")
+if not MONGODB_URI:
+    raise RuntimeError("Set the MONGODB_URI environment variable (see .env.example)")
 client = MongoClient(MONGODB_URI)
 db = client['facerecognition_db']
 collection = db['users']

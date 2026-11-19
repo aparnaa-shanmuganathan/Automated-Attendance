@@ -74,3 +74,43 @@ and are excluded from git.
 | `CAMERA_INDEX` | 0 | Which camera to use |
 
 ---
+
+## Project structure
+
+```
+attendance.py            # Main application entry point
+takeImage.py             # Registration: face capture with quality checks
+trainImage.py            # LBPH model training
+automaticAttedance.py    # Real-time recognition and attendance recording
+show_attendance.py       # Attendance summary and percentages
+export_utils.py          # Excel / PDF export
+config.py                # Tunable settings
+logger_config.py         # Logging
+haarcascade_frontalface_default.xml
+backend/, frontend/      # Experimental web version (Flask + MongoDB API, Next.js UI)
+```
+
+---
+
+## Tech stack
+
+Python · OpenCV (Haar cascade, LBPH from `opencv-contrib-python`) · NumPy · pandas ·
+Tkinter · Pillow · pyttsx3 (voice prompts) · openpyxl / reportlab (exports)
+
+---
+
+## Known limitations
+
+- **No liveness detection.** A printed photo or phone screen of a registered student may
+  be recognised. Anti-spoofing (blink or motion checks, depth camera) would be needed
+  before relying on it to stop proxy attendance.
+- LBPH is sensitive to large changes in lighting, pose and appearance; retrain after
+  significant changes.
+- Enrollment numbers must be numeric, because LBPH labels are integers.
+- Face images are stored unencrypted on the local machine.
+
+---
+
+## Credits
+
+- C Vishwak Sena ([@vishwaksen21](https://github.com/vishwaksen21)): frontend / user interface
